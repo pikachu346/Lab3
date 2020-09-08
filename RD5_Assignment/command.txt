@@ -1,0 +1,24 @@
+create database bank;
+
+use bank;
+
+create table member(
+    mid int auto_increment primary key,
+    name varchar(20) not null,
+    account varchar(20) not null,
+    pwd varchar(255) not null,
+    sex varchar(20) not null,
+    email varchar(20) not null
+    );
+
+create table process(
+    pid int auto_increment primary key,
+    mid int not null,
+    depositWithdraw varchar(5) not null,
+    pmoney int not null,
+    balance int not null,
+    cdate timestamp not null default now()
+    
+);
+
+
